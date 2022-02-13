@@ -1,0 +1,8 @@
+<ul class="todo-list">
+  <input id="toggle-all" class="toggle-all" type="checkbox" />
+  <label (click)="toggleAllTodo()" for="toggle-all">Mark all as complete</label>
+  <app-todos-item
+    [todo]="todo"
+    *ngFor="let todo of todos | filterTodo: filter"
+  ></app-todos-item>
+</ul>
